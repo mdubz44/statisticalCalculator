@@ -8,3 +8,6 @@ class Calculator:
 
     def subtraction(self, a, b):
         return a - b
+
+    def multiplication(self, a, b):
+        return a * b
