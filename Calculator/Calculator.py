@@ -19,3 +19,6 @@ class Calculator:
     def squareRoot(self, a):
         return math.sqrt(a)
 
+    def squared(self, a):
+        return math.pow(a, 2)
+
