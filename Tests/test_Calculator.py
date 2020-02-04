@@ -30,6 +30,11 @@ class MyTestCase(unittest.TestCase):
         result = calculator.division(2, 2)
         self.assertEqual(1, result)
 
+    def test_calculator_squareRoot(self):
+        calculator = Calculator()
+        result = calculator.squareRoot(4)
+        self.assertEqual(2, result)
+
 
 
 

@@ -1,3 +1,4 @@
+import math
 class Calculator:
 
     def __init__(self):
@@ -14,3 +15,7 @@ class Calculator:
 
     def division(self, a, b):
         return a / b
+
+    def squareRoot(self, a):
+        return math.sqrt(a)
+
