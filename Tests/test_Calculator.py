@@ -5,40 +5,34 @@ from Calculator.Calculator import Calculator
 
 class MyTestCase(unittest.TestCase):
 
+    def setUp(self):
+        self.calculator = Calculator()
+
     def test_instantiate_calculator(self):
-        calculator = Calculator()
+        self.assertIsInstance(self.calculator, Calculator)
 
-        self.assertIsInstance(calculator, Calculator)
-
-    def test_calculator_addition(self):
-        calculator = Calculator()
-        result = calculator.addition(1, 2)
+    def test_calculator_return_sum(self):
+        result = self.calculator.Sum(1, 2)
         self.assertEqual(3, result)
 
-    def test_calculator_subtraction(self):
-        calculator = Calculator()
-        result = calculator.subtraction(2, 1)
+    def test_calculator_access_sum_result(self):
+        self.calculator.Sum(1, 2)
+        self.assertEqual(3, self.calculator.Result)
+
+    def test_calculator_return_difference(self):
+
+        result = self.calculator.Difference(2, 1)
         self.assertEqual(1, result)
 
-    def test_calculator_multiplication(self):
-        calculator = Calculator()
-        result = calculator.multiplication(2, 2)
-        self.assertEqual(4, result)
+    def test_calculator_access_difference_result(self):
+        self.calculator.Difference(2, 1)
+        self.assertEqual(1, self.calculator.Result)
+    def test_multiple_calculators(self):
+        calculator1 = Calculator()
+        calculator2 = Calculator()
+        self.calculator.Sum(calculator1.Sum(1, 2), calculator2.Difference(2, 1))
+        self.assertEqual(4, self.calculator.Result)
 
-    def test_calculator_division(self):
-        calculator = Calculator()
-        result = calculator.division(2, 2)
-        self.assertEqual(1, result)
-
-    def test_calculator_squareRoot(self):
-        calculator = Calculator()
-        result = calculator.squareRoot(4)
-        self.assertEqual(2, result)
-
-    def test_calculator_squared(self):
-        calculator = Calculator()
-        result = calculator.squared(2)
-        self.assertEqual(4, result)
 
 
 

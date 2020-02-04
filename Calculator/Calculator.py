@@ -1,14 +1,19 @@
 import math
+from MathOperations.addition import Addition
+from MathOperations.subtraction import Subtraction
+
 class Calculator:
 
     def __init__(self):
         pass
 
-    def addition(self, a, b):
-        return a + b
+    def Sum(self, a, b):
+        self.Result = Addition.sum(a, b)
+        return self.Result
 
-    def subtraction(self, a, b):
-        return a - b
+    def Difference(self, a, b):
+        self.Result = Subtraction.difference(a, b)
+        return self.Result
 
     def multiplication(self, a, b):
         return a * b
