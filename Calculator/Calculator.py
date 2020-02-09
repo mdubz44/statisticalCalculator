@@ -2,6 +2,7 @@ import math
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
+from MathOperations.division import Division
 
 class Calculator:
 
@@ -20,7 +21,8 @@ class Calculator:
         self.Result = Multiplication.multiply(a, b)
         return a * b
 
-    def division(self, a, b):
+    def Divide(self, a, b):
+        self.Result = Division.divide(a, b)
         return a / b
 
     def squareRoot(self, a):
