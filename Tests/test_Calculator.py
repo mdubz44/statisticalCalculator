@@ -61,6 +61,15 @@ class MyTestCase(unittest.TestCase):
         self.calculator.SqRt(4)
         self.assertEqual(2, self.calculator.Result)
 
+    def test_calculator_return_log(self):
+        result = self.calculator.Log(2, 10)
+        self.assertEqual(0.30102999566398114, result)
+
+    def test_calculator_access_log(self):
+        self.calculator.Log(2, 10)
+        self.assertEqual(0.30102999566398114, self.calculator.Result)
+
+
     def test_multiple_calculators(self):
         calculator1 = Calculator()
         calculator2 = Calculator()

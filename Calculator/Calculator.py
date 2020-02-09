@@ -5,6 +5,7 @@ from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponentiation import Exponentiation
 from MathOperations.squareRoot import SquareRoot
+from MathOperations.logarithm import Logarithm
 
 class Calculator:
 
@@ -34,4 +35,8 @@ class Calculator:
     def Power(self, a, b):
         self.Result = Exponentiation.power(a, b)
         return math.pow(a, b)
+
+    def Log(self, a, b):
+        self.Result = Logarithm.log(a, b)
+        return math.log(a, b)
 
