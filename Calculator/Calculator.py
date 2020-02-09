@@ -3,6 +3,7 @@ from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
+from MathOperations.exponentiation import Exponentiation
 
 class Calculator:
 
@@ -25,9 +26,10 @@ class Calculator:
         self.Result = Division.divide(a, b)
         return a / b
 
-    def squareRoot(self, a):
+    def Sqrt(self, a):
         return math.sqrt(a)
 
-    def squared(self, a):
-        return math.pow(a, 2)
+    def Power(self, a, b):
+        self.Result = Exponentiation.power(a, b)
+        return math.pow(a, b)
 

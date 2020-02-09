@@ -1,4 +1,5 @@
 import unittest
+import math
 
 from Calculator.Calculator import Calculator
 
@@ -43,6 +44,14 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_access_divide_result(self):
         self.calculator.Divide(2, 2)
         self.assertEqual(1, self.calculator.Result)
+
+    def test_calculator_return_exponent(self):
+        result = self.calculator.Power(2, 2)
+        self.assertEqual(4, result)
+
+    def test_calculator_access_power_result(self):
+        self.calculator.Power(2, 2)
+        self.assertEqual(4, self.calculator.Result)
 
     def test_multiple_calculators(self):
         calculator1 = Calculator()
