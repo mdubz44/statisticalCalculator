@@ -4,6 +4,7 @@ from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponentiation import Exponentiation
+from MathOperations.squareRoot import SquareRoot
 
 class Calculator:
 
@@ -26,7 +27,8 @@ class Calculator:
         self.Result = Division.divide(a, b)
         return a / b
 
-    def Sqrt(self, a):
+    def SqRt(self, a):
+        self.Result = SquareRoot.sqRt(a)
         return math.sqrt(a)
 
     def Power(self, a, b):
