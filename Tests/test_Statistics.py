@@ -7,6 +7,7 @@ from StatisticalOperations.variance import Variance
 from StatisticalOperations.standardDeviation import StandardDeviation
 from StatisticalOperations.quartile import Quartile
 from StatisticalOperations.skewness import Skewness
+from StatisticalOperations.zScore import ZScore
 
 class StatsTest:
 
@@ -46,3 +47,11 @@ class StatsTest:
         stD = statistics.stdev(aList)
         skew = 3 * (mean-median)/stD
         return skew
+
+    def test_Statistics_zScore(self):
+        aList = [4,5,6,7]
+        mean = statistics.mean(aList)
+        stD = statistics.stdev(aList)
+        for i in aList:
+            zscore = (i - mean)/stD
+            return zscore

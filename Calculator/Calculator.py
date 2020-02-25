@@ -14,6 +14,7 @@ from StatisticalOperations.variance import Variance
 from StatisticalOperations.standardDeviation import StandardDeviation
 from StatisticalOperations.quartile import Quartile
 from StatisticalOperations.skewness import Skewness
+from StatisticalOperations.zScore import ZScore
 
 class Calculator:
 
@@ -85,4 +86,8 @@ class Calculator:
         self.Result = Skewness.Skew(list6)
         return Skewness.Skew(list6)
 
+    def zScore1(self):
+        list7 = [4,5,6,7]
+        self.Result = ZScore.zS(list7)
+        return ZScore.zS(list7)
 
