@@ -9,6 +9,7 @@ from MathOperations.squareRoot import SquareRoot
 from MathOperations.logarithm import Logarithm
 from StatisticalOperations.mean import Mean
 from StatisticalOperations.median import Median
+from StatisticalOperations.mode import Mode
 
 class Calculator:
 
@@ -52,6 +53,11 @@ class Calculator:
         list1 = [4,5,6,7]
         self.Result = Median.Med(list1)
         return statistics.median(list1)
+
+    def Mode1(self):
+        list2 = [4,5,6,7]
+        self.Result = Mode.Mod(list2)
+        return statistics.mode(list2)
 
 
 
