@@ -1,4 +1,5 @@
 import math
+import statistics
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
@@ -6,6 +7,8 @@ from MathOperations.division import Division
 from MathOperations.exponentiation import Exponentiation
 from MathOperations.squareRoot import SquareRoot
 from MathOperations.logarithm import Logarithm
+from StatisticalOperations.mean import Mean
+from StatisticalOperations.median import Median
 
 class Calculator:
 
@@ -39,4 +42,16 @@ class Calculator:
     def Log(self, a, b):
         self.Result = Logarithm.log(a, b)
         return math.log(a, b)
+
+    def Mean1(self):
+        aList = [4, 5, 6, 7]
+        self.Result = Mean.Mea(aList)
+        return statistics.mean(aList)
+
+    def Median1(self):
+        list1 = [4,5,6,7]
+        self.Result = Median.Med(list1)
+        return statistics.median(list1)
+
+
 
