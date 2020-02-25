@@ -12,6 +12,7 @@ from StatisticalOperations.median import Median
 from StatisticalOperations.mode import Mode
 from StatisticalOperations.variance import Variance
 from StatisticalOperations.standardDeviation import StandardDeviation
+from StatisticalOperations.quartile import Quartile
 
 class Calculator:
 
@@ -49,30 +50,34 @@ class Calculator:
     def Mean1(self):
         aList = [4, 5, 6, 7]
         self.Result = Mean.Mea(aList)
-        return statistics.mean(aList)
+        return Mean.Mea(aList)
 
     def Median1(self):
         list1 = [4,5,6,7]
         self.Result = Median.Med(list1)
-        return statistics.median(list1)
+        return Median.Med(list1)
 
     def Mode1(self):
         list2 = [4,5,6,7]
         self.Result = Mode.Mod(list2)
-        return statistics.mode(list2)
+        return Mode.Mod(list2)
 
     def Variance1(self):
         list3 = [4,5,6,7]
         me = statistics.mean(list3)
         self.Result = Variance.Var(list3)
-        return statistics.variance(list3, me)
+        return Variance.Var(list3)
 
     def StandardDeviation1(self):
         list4 = [4,5,6,7]
         me = statistics.mean(list4)
         self.Result = StandardDeviation.SD(list4)
-        return statistics.stdev(list4, me)
-    
+        return StandardDeviation.SD(list4)
+
+    def Quartile1(self):
+        list5 = [4,5,6,7]
+        self.Result = Quartile.Quart(list5)
+        return  Quartile.Quart(list5)
 
 
 
