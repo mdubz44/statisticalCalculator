@@ -4,6 +4,7 @@ from StatisticalOperations.mean import Mean
 from StatisticalOperations.median import Median
 from StatisticalOperations.mode import Mode
 from StatisticalOperations.variance import Variance
+from StatisticalOperations.standardDeviation import StandardDeviation
 
 class StatsTest:
 
@@ -23,3 +24,8 @@ class StatsTest:
         aList = [4,5,6,7]
         me = statistics.mean(aList)
         return statistics.variance(aList, me)
+
+    def test_Statistics_StandardDeviation(self):
+        aList = [4,5,6,7]
+        me = statistics.mean(aList)
+        return statistics.stdev(aList, me)

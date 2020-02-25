@@ -11,6 +11,7 @@ from StatisticalOperations.mean import Mean
 from StatisticalOperations.median import Median
 from StatisticalOperations.mode import Mode
 from StatisticalOperations.variance import Variance
+from StatisticalOperations.standardDeviation import StandardDeviation
 
 class Calculator:
 
@@ -65,6 +66,13 @@ class Calculator:
         me = statistics.mean(list3)
         self.Result = Variance.Var(list3)
         return statistics.variance(list3, me)
+
+    def StandardDeviation1(self):
+        list4 = [4,5,6,7]
+        me = statistics.mean(list4)
+        self.Result = StandardDeviation.SD(list4)
+        return statistics.stdev(list4, me)
+    
 
 
 
