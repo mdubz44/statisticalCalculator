@@ -6,6 +6,7 @@ from StatisticalOperations.mode import Mode
 from StatisticalOperations.variance import Variance
 from StatisticalOperations.standardDeviation import StandardDeviation
 from StatisticalOperations.quartile import Quartile
+from StatisticalOperations.skewness import Skewness
 
 class StatsTest:
 
@@ -37,3 +38,11 @@ class StatsTest:
         q1 = statistics.median(aList[0:med])
         q3 = statistics.median(aList[med:-1])
         return q1, q3
+
+    def test_Statistics_Skewness(self):
+        aList = [4,5,6,7]
+        mean = statistics.mean(aList)
+        median = statistics.median(aList)
+        stD = statistics.stdev(aList)
+        skew = 3 * (mean-median)/stD
+        return skew
