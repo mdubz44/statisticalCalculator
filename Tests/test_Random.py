@@ -3,6 +3,7 @@ import random
 from RandomGenerator.randNumWoSeed import RandNumWoSeed
 from RandomGenerator.randNumWSeed import RandNumWSeed
 from RandomGenerator.randomListGen import RandomListGen
+from RandomGenerator.randomPick import RandomPick
 
 class randomTest:
 
@@ -14,7 +15,9 @@ class randomTest:
         return random.randint(10, 20)
 
     def test_RandomGenerator_RandomListGen(self):
-        aList = []
-        random.seed(15)
-        for i in range(4):
-            aList.append(random.randint(10, 20))
+        alist = []
+        return listGen(alist)
+
+    def test_RandomGenerator_RandomPick(self):
+        alist= [1, 2, 3, 4, 5]
+        return Pick(alist)

@@ -3,8 +3,11 @@ import random
 class RandomListGen:
 
     @staticmethod
-    def listGen(a,b,c,d):
-        alist= []
-        random.seed(a)
-        for i in range(b):
-           alist.append(random.randint(c, d))
+    def listGen(start, end, num):
+        result = []
+        for i in range(num):
+            res.append(random.randint(start, end))
+
+        return result
+
+
