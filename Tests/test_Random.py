@@ -26,3 +26,9 @@ class randomTest:
     def test_RandomGenerator_RandomFromListNoSeed(self):
         alist = [1,2,3,4,5,6]
         return NumsFromListNoSeed(alist)
+
+    def test_RandomGenerator_RandomFromListWSeed(self):
+        alist = [1,2,3,4,5,6]
+        random.seed(5)
+        return NumsFromListWSeed(alist)
+
