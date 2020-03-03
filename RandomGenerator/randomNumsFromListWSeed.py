@@ -9,6 +9,6 @@ class RandomNumsFromListWSeed:
         newList = []
         for i in range(random.random):
             newList += Pick(alist)
-        return  newList
+        return newList
 
 
