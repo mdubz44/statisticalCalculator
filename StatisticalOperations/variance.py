@@ -1,9 +1,10 @@
 import statistics
+from StatisticalOperations import mean
 
 class Variance:
 
     @staticmethod
     def Var(aList):
         aList = []
-        me = statistics.mean(aList)
-        return statistics.variance(aList, me)
+        mean = Mea(aList)
+        return (float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2, aList)))/ len(aList)-1)
