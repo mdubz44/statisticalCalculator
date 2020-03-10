@@ -1,11 +1,10 @@
-import statistics
+from StatisticalOperations.median import Median
 
 class Quartile:
 
     @staticmethod
-    def Quart(alist):
-        alist = []
-        med = statistics.median(alist)
-        q1 = statistics.median(alist[0:med])
-        q3 = statistics.median(alist[med:-1])
-        return q1, q3
+    def Quartile1(alist):
+        med = Median.Median1(alist)
+        q1 = Median.Median1(alist[0:med])
+        q3 = Median.Median1(alist[med:-1])
+        return q1, med, q3

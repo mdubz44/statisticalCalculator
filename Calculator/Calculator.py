@@ -49,45 +49,38 @@ class Calculator:
         self.Result = Logarithm.log(a, b)
         return math.log(a, b)
 
-    def Mean1(self):
-        aList = [4, 5, 6, 7]
-        self.Result = Mean.Mea(aList)
-        return Mean.Mea(aList)
+    def Mean(self, aList):
+        aList = [1, 2, 3, 4]
+        self.Result = Mean.Mean1(aList)
+        return self.Result
 
-    def Median1(self):
-        list1 = [4,5,6,7]
-        self.Result = Median.Med(list1)
-        return Median.Med(list1)
+    def Median(self, aList):
+        aList = [1, 2, 2, 3, 4]
+        self.Result = Median.Median1(aList)
+        return self.Result
 
-    def Mode1(self):
-        list2 = [4,5,6,7]
-        self.Result = Mode.Mod(list2)
-        return Mode.Mod(list2)
+    def Mode(self, aList):
+        aList = [1, 2, 2, 3, 4]
+        self.Result = Mode.Mode1(aList)
+        return self.Result
 
-    def Variance1(self):
-        list3 = [4,5,6,7]
-        me = statistics.mean(list3)
-        self.Result = Variance.Var(list3)
-        return Variance.Var(list3)
+    def Variance(self, aList):
+        aList = [1, 2, 3, 4, 5]
+        self.Result = Variance.Variance1(aList)
+        return self.Result
 
-    def StandardDeviation1(self):
-        list4 = [4,5,6,7]
-        me = statistics.mean(list4)
-        self.Result = StandardDeviation.SD(list4)
-        return StandardDeviation.SD(list4)
+    def StandardDeviation(self, aList):
+        aList = [1, 2, 3, 4, 5]
+        self.Result = StandardDeviation.StandardDeviation1(aList)
 
-    def Quartile1(self):
-        list5 = [4,5,6,7]
-        self.Result = Quartile.Quart(list5)
-        return Quartile.Quart(list5)
+    def Quartile(self, aList):
+        aList = [1, 2, 3, 4, 5]
+        self.Result = Quartile.Quartile1(aList)
 
-    def Skewness1(self):
-        list6 = [4,5,6,7]
-        self.Result = Skewness.Skew(list6)
-        return Skewness.Skew(list6)
+    def Skewness(self, aList):
+        aList = [1, 2, 3, 4, 5]
+        self.Result = Skewness.Skew(aList)
 
-    def zScore1(self):
-        list7 = [4,5,6,7]
-        self.Result = ZScore.zS(list7)
-        return ZScore.zS(list7)
-
+    def ZScore(self, aList):
+        aList = [1, 2, 3, 4, 5]
+        self.Result = ZScore.ZScore1(aList)

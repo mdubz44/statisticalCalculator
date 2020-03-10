@@ -3,6 +3,5 @@ import statistics
 class Median:
 
     @staticmethod
-    def Med(aList):
-        aList = []
+    def Median1(aList):
         return statistics.median(aList)

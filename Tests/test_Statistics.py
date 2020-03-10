@@ -38,7 +38,7 @@ class StatsTest:
         med = statistics.median(aList)
         q1 = statistics.median(aList[0:med])
         q3 = statistics.median(aList[med:-1])
-        return q1, q3
+        return q1, med, q3
 
     def test_Statistics_Skewness(self):
         aList = [4,5,6,7]

@@ -3,6 +3,5 @@ import statistics
 class Mode:
 
     @staticmethod
-    def Mod(aList):
-        aList = []
+    def Mode1(aList):
         return statistics.mode(aList)

@@ -3,8 +3,7 @@
 class Mean:
 
     @staticmethod
-    def Mea(aList):
-        aList = []
-        mean = sum(aList)/len(aList)
+    def Mean1(aList):
+        return sum(aList)/len(aList)
 
 
