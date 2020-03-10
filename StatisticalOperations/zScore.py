@@ -1,12 +1,14 @@
-import statistics
+from StatisticalOperations.mean import Mean
+from StatisticalOperations.standardDeviation import StandardDeviation
 
 class ZScore:
 
     @staticmethod
-    def zS(alist):
-        alist = []
-        mean = statistics.mean(alist)
-        stD = statistics.stdev(alist)
+    def ZScore1(alist):
+        mean = Mean.Mean1(alist)
+        stD = StandardDeviation.StandardDeviation1(alist)
+        zScoreList = []
         for i in alist:
-            zscore = (i - mean)/stD
-            return zscore
+            zscore = (i - mean) / stD
+            zScoreList.append(zscore)
+        return zScoreList

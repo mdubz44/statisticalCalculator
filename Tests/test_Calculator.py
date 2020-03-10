@@ -68,6 +68,45 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_access_log(self):
         self.calculator.Log(2, 10)
         self.assertEqual(0.30102999566398114, self.calculator.Result)
+    def test_calculator_access_mean_result(self):
+        aList = [1,2,3,4]
+        self.calculator.Mean(aList)
+        self.assertEqual(2.5, self.calculator.Result)
+
+    def test_calculator_access_median_result(self):
+        aList = [1,2,2,3,4]
+        self.calculator.Median(aList)
+        self.assertEqual(2,self.calculator.Result)
+
+    def test_calculator_access_mode_result(self):
+        aList = [1,2,2,3,4]
+        self.calculator.Mode(aList)
+        self.assertEqual(2, self.calculator.Result)
+
+    def test_calculator_access_variance_result(self):
+        aList = [1,2,3,4,5]
+        self.calculator.Variance(aList)
+        self.assertEqual(2.5, self.calculator.Result)
+
+    def test_calculator_access_standardDeviation_result(self):
+        aList = [1,2,3,4,5]
+        self.calculator.StandardDeviation(aList)
+        self.assertEqual(1, self.calculator.Result)
+
+    def test_calculator_access_quartile_result(self):
+        aList = [1,2,3,4,5]
+        self.calculator.Quartile(aList)
+        self.assertEqual((2,3,4), self.calculator.Result)
+
+    def test_calculator_access_skewness_result(self):
+        aList = [1,2,3,4,5]
+        self.calculator.Skewness(aList)
+        self.assertEqual(0, self.calculator.Result)
+
+    def test_calculator_access_ZScore_result(self):
+        aList = [1,2,3,4,5]
+        self.calculator.ZScore(aList)
+        self.assertEqual([-2.0, -1.0, 0.0, 1.0, 2.0], self.calculator.Result)
 
 
     def test_multiple_calculators(self):
